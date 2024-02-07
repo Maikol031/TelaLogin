@@ -1,17 +1,22 @@
 <template>
-    <scopedLogin/>
-
+    <scopedLogin @openModalMessage="openModalMessage = $event"/>
+    <ModalCenterReports :modalActive="openModalMessage"  :message="'Cadastro concluído'"/>
 
 </template>
 <script setup>
 import scopedLogin from "@/components/scopedLogin.vue"
+import ModalCenterReports from "@/components/ModalCenterReports.vue";
+import { ref } from "vue";
+
+
+const openModalMessage = ref(false)
 
 
 
 </script>
 <style>
     
-@media (min-width: 1024px) {
+@media (min-width: 420px) {
   body {
     display: flex;
     place-items: center;
