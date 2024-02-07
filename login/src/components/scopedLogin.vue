@@ -50,12 +50,13 @@ const passwordsObject = {'sucessReptPassword': ''}
 const email = ref('')
 const visualitPassword = ref('password')
 const token = ref('')
-// const openModalMessage = ref(false);
+
 
 const emit = defineEmits(['openModalMessage'])
 
 
 const openRegister = () => {
+    emit('openModalMessage', false)
     register.value = !register.value;
 }
 
@@ -211,3 +212,7 @@ h2{
 
 
 </style>
+
+
+
+
